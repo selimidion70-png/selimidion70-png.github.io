@@ -1,0 +1,513 @@
+/* ============================================================
+   Portfolio – Dion Selimi
+   1. Couleurs et réglages   2. Base   3. En-tête   4. Présentation
+   5. Sections   6. Compétences   7. Projets   8. Parcours
+   9. Contact   10. Pied de page   11. Mobile
+   ============================================================ */
+
+/* ---------- 1. Couleurs et réglages ---------- */
+:root {
+    --fond:          #ffffff;
+    --fond-gris:     #f6f7f9;
+    --texte:         #111827;
+    --texte-doux:    #4b5563;
+    --bordure:       #e5e7eb;
+    --accent:        #1e3a8a;
+    --accent-clair:  #e8edfb;
+    --ombre:         0 10px 30px rgba(17, 24, 39, 0.08);
+
+    --police:        'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    --largeur:       1080px;
+    --rayon:         12px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --fond:         #0f1117;
+        --fond-gris:    #161a23;
+        --texte:        #f3f4f6;
+        --texte-doux:   #a1a8b5;
+        --bordure:      #262b36;
+        --accent:       #8fb0ff;
+        --accent-clair: #1c2540;
+        --ombre:        0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+}
+
+/* ---------- 2. Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* les titres ne passent pas sous l'en-tête fixe */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+}
+
+body {
+    margin: 0;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: var(--police);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--accent);
+    text-underline-offset: 3px;
+}
+
+a:focus-visible,
+.bouton:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin: 0 0 0.75rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+.conteneur {
+    width: 100%;
+    max-width: var(--largeur);
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.lien-evitement {
+    position: absolute;
+    left: 1rem;
+    top: -3rem;
+    padding: 0.5rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    z-index: 100;
+}
+
+.lien-evitement:focus {
+    top: 1rem;
+}
+
+.accent {
+    color: var(--accent);
+}
+
+/* ---------- 3. En-tête ---------- */
+.entete {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--fond) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bordure);
+}
+
+.entete__interieur {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    min-height: 4rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--texte);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo__monogramme {
+    display: grid;
+    place-items: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 8px;
+    background: var(--accent);
+    color: var(--fond);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav a {
+    color: var(--texte-doux);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: var(--texte);
+}
+
+/* ---------- 4. Présentation ---------- */
+.hero {
+    padding: 7rem 0 6rem;
+}
+
+.sur-titre {
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    max-width: 16ch;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.hero__intro {
+    max-width: 38rem;
+    color: var(--texte-doux);
+    font-size: 1.2rem;
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.bouton {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    border: 2px solid var(--accent);
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.bouton:hover {
+    transform: translateY(-2px);
+}
+
+.bouton--plein {
+    background: var(--accent);
+    color: var(--fond);
+}
+
+.bouton--contour {
+    color: var(--accent);
+}
+
+.bouton--contour:hover {
+    background: var(--accent-clair);
+}
+
+/* ---------- 5. Sections ---------- */
+.section {
+    padding: 5rem 0;
+}
+
+.section--grise {
+    background: var(--fond-gris);
+}
+
+.section__titre {
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    letter-spacing: -0.01em;
+}
+
+.deux-colonnes {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.texte {
+    max-width: 42rem;
+    color: var(--texte-doux);
+}
+
+.texte strong {
+    color: var(--texte);
+}
+
+.puces {
+    margin: 0 0 1rem;
+    padding-left: 1.2rem;
+    color: var(--texte-doux);
+}
+
+.puces li {
+    margin-bottom: 0.35rem;
+}
+
+.puces li::marker {
+    color: var(--accent);
+}
+
+/* ---------- 6. Compétences ---------- */
+.grille-competences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.carte-competence {
+    padding: 1.5rem;
+    background: var(--fond);
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+}
+
+.carte-competence h3 {
+    font-size: 1.1rem;
+}
+
+/* ---------- 7. Projets ---------- */
+.projet {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 2.5rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.projet + .projet {
+    margin-top: 5rem;
+}
+
+.projet--inverse .projet__image {
+    order: 2;
+}
+
+.projet__image {
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+    box-shadow: var(--ombre);
+}
+
+.projet__type {
+    margin-bottom: 0.4rem;
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.projet h3 {
+    font-size: 1.45rem;
+}
+
+.projet__texte > p {
+    color: var(--texte-doux);
+}
+
+.projet__texte strong {
+    color: var(--texte);
+}
+
+.etiquettes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+}
+
+.etiquettes li {
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    background: var(--accent-clair);
+    color: var(--accent);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.lien-fleche {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.lien-fleche::after {
+    content: " →";
+    transition: margin-left 0.15s ease;
+}
+
+.lien-fleche:hover::after {
+    margin-left: 0.25rem;
+}
+
+/* ---------- 8. Parcours ---------- */
+.chronologie {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 2px solid var(--bordure);
+    list-style: none;
+}
+
+.chronologie li {
+    position: relative;
+}
+
+.chronologie li::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.5rem - 7px);
+    top: 0.45rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 4px var(--fond-gris);
+}
+
+.chronologie__date {
+    margin-bottom: 0.2rem;
+    color: var(--accent);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.chronologie h3 {
+    margin-bottom: 0.1rem;
+    font-size: 1.15rem;
+}
+
+.chronologie__lieu {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.chronologie li > p:last-child {
+    color: var(--texte-doux);
+}
+
+/* ---------- 9. Contact ---------- */
+.contact__intro {
+    color: var(--texte-doux);
+    font-size: 1.15rem;
+}
+
+.contact__liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.contact__liste li {
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+}
+
+.contact__libelle {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: var(--texte-doux);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.contact__liste a {
+    font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+/* ---------- 10. Pied de page ---------- */
+.pied {
+    padding: 2rem 0;
+    border-top: 1px solid var(--bordure);
+    color: var(--texte-doux);
+    font-size: 0.9rem;
+}
+
+.pied p {
+    margin: 0;
+}
+
+/* ---------- 11. Mobile ---------- */
+@media (max-width: 860px) {
+    .deux-colonnes,
+    .projet {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .projet--inverse .projet__image {
+        order: 0;
+    }
+
+    .grille-competences {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .section {
+        padding: 3.5rem 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .entete__interieur {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.5rem;
+    }
+
+    /* Menu en ligne qui défile horizontalement, sans JavaScript */
+    .entete nav {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .nav {
+        gap: 1.1rem;
+        padding-bottom: 0.25rem;
+        white-space: nowrap;
+    }
+
+    html {
+        scroll-padding-top: 7rem;
+    }
+}

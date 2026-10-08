@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dion Selimi – Développeur Web Front-End</title>
+    <meta name="description" content="Portfolio de Dion Selimi, développeur web front-end en formation à l'EFP Bruxelles : HTML, CSS, JavaScript, PHP, MySQL.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e3a8a'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='white'%3EDS%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header class="entete">
+    <div class="conteneur entete__interieur">
+        <a href="#accueil" class="logo" aria-label="Dion Selimi – retour en haut">
+            <span class="logo__monogramme" aria-hidden="true">DS</span>
+            <span class="logo__nom">Dion Selimi</span>
+        </a>
+        <nav aria-label="Navigation principale">
+            <ul class="nav">
+                <li><a href="#a-propos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main id="contenu">
+
+    <!-- ===== Présentation ===== -->
+    <section id="accueil" class="hero" aria-labelledby="titre-hero">
+        <div class="conteneur">
+            <p class="sur-titre">Développeur Web Front-End · EFP Bruxelles</p>
+            <h1 id="titre-hero">Bonjour, je suis <span class="accent">Dion Selimi</span>.</h1>
+            <p class="hero__intro">
+                Je conçois des sites web clairs, accessibles et responsives, de l'intégration HTML/CSS
+                jusqu'au back-end en PHP et MySQL.
+            </p>
+            <p class="hero__actions">
+                <a class="bouton bouton--plein" href="#projets">Voir mes projets</a>
+                <a class="bouton bouton--contour" href="#contact">Me contacter</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== À propos ===== -->
+    <section id="a-propos" class="section" aria-labelledby="titre-a-propos">
+        <div class="conteneur deux-colonnes">
+            <h2 id="titre-a-propos" class="section__titre">À propos</h2>
+            <div class="texte">
+                <p>
+                    Je suis en formation de <strong>développeur web front-end à l'EFP Bruxelles</strong> (2025–2027).
+                    J'aime construire des interfaces simples à utiliser, mais aussi comprendre ce qui se passe derrière :
+                    base de données, sécurité, formulaires, emails…
+                </p>
+                <p>
+                    Mes projets vont de la page vitrine <em>mobile-first</em> au site complet avec espace
+                    d'administration, réservation en ligne et paiement. Je soigne particulièrement
+                    l'accessibilité, le code propre et lisible, et le travail avec Git.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Compétences ===== -->
+    <section id="competences" class="section section--grise" aria-labelledby="titre-competences">
+        <div class="conteneur">
+            <h2 id="titre-competences" class="section__titre">Compétences</h2>
+            <div class="grille-competences">
+                <article class="carte-competence">
+                    <h3>Front-end</h3>
+                    <ul class="puces">
+                        <li>HTML5 sémantique</li>
+                        <li>CSS3 (Flexbox, Grid, variables)</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Responsive design &amp; mobile-first</li>
+                        <li>Accessibilité (WCAG)</li>
+                    </ul>
+                </article>
+                <article class="carte-competence">
+                    <h3>Back-end</h3>
+                    <ul class="puces">
+                        <li>PHP 8 (architecture MVC)</li>
+                        <li>MySQL &amp; PDO</li>
+                        <li>Intégration d'API REST</li>
+                        <li>Sécurité web (CSRF, mots de passe, sessions)</li>
+                    </ul>
+                </article>
+                <article class="carte-competence">
+                    <h3>Outils</h3>
+                    <ul class="puces">
+                        <li>Git &amp; GitHub</li>
+                        <li>Figma</li>
+                        <li>VS Code</li>
+                        <li>Laragon</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Projets ===== -->
+    <section id="projets" class="section" aria-labelledby="titre-projets">
+        <div class="conteneur">
+            <h2 id="titre-projets" class="section__titre">Projets</h2>
+
+            <article class="projet" aria-labelledby="projet-bechill">
+                <figure class="projet__image">
+                    <img src="img/bechill-accueil.webp" width="1280" height="800" loading="lazy"
+                         alt="Page d'accueil du site BE CHILL : en-tête brun et doré, liste des soins vedettes.">
+                </figure>
+                <div class="projet__texte">
+                    <p class="projet__type">Projet d'atelier · EFP Bruxelles · enrichi après l'examen</p>
+                    <h3 id="projet-bechill">BE CHILL – Salon de massage</h3>
+                    <p>
+                        Site complet et administrable pour un salon de massage (fictif) à Bruxelles,
+                        développé en <strong>PHP avec une architecture MVC</strong> et une base MySQL.
+                    </p>
+                    <ul class="puces">
+                        <li>Catalogue des soins avec recherche, filtres et photos</li>
+                        <li>Réservation en ligne qui tient compte des créneaux déjà pris et des horaires</li>
+                        <li>Paiement en ligne (Mollie) ou sur place, emails de confirmation</li>
+                        <li>Espace d'administration avec rôles (administrateur / éditeur)</li>
+                        <li>RGPD, protection CSRF, mots de passe chiffrés, HTML validé</li>
+                    </ul>
+                    <ul class="etiquettes">
+                        <li>PHP</li><li>MySQL</li><li>MVC</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+                    </ul>
+                    <p class="projet__liens">
+                        <a class="lien-fleche" href="https://github.com/selimidion70-png/Atelier-Bechill">Voir le code sur GitHub</a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="projet projet--inverse" aria-labelledby="projet-aegis">
+                <figure class="projet__image">
+                    <img src="img/aegis-desktop.webp" width="1280" height="800" loading="lazy"
+                         alt="Page d'accueil d'Aegis Bank : fond bleu nuit, titre « La néobanque éthique & transparente » et bouton vert « Télécharger l'app ».">
+                </figure>
+                <div class="projet__texte">
+                    <p class="projet__type">Projet d'examen · Front-end</p>
+                    <h3 id="projet-aegis">Aegis Bank – Néobanque éthique</h3>
+                    <p>
+                        Page d'accueil <strong>mobile-first</strong> pour une néobanque éthique et transparente :
+                        interface épurée, animations fluides et design responsive.
+                    </p>
+                    <ul class="puces">
+                        <li>Menu burger et navigation adaptée au mobile</li>
+                        <li>Appel à l'action et offre promotionnelle mis en avant</li>
+                        <li>Animations et effets lumineux en CSS</li>
+                        <li>Variables CSS organisées par thème (couleurs, typographie, boutons)</li>
+                    </ul>
+                    <ul class="etiquettes">
+                        <li>HTML</li><li>CSS</li><li>Mobile-first</li><li>Animations</li>
+                    </ul>
+                    <p class="projet__liens">
+                        <a class="lien-fleche" href="https://github.com/selimidion70-png/Projet-aegis-bank">Voir le code sur GitHub</a>
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ===== Parcours ===== -->
+    <section id="parcours" class="section section--grise" aria-labelledby="titre-parcours">
+        <div class="conteneur deux-colonnes">
+            <h2 id="titre-parcours" class="section__titre">Parcours</h2>
+            <ol class="chronologie">
+                <li>
+                    <p class="chronologie__date">2025 – 2027</p>
+                    <h3>Développeur Web Front-End</h3>
+                    <p class="chronologie__lieu">EFP Bruxelles</p>
+                    <p>Intégration HTML/CSS, JavaScript, React, PHP et MySQL, accessibilité, gestion de projet et Git.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section contact" aria-labelledby="titre-contact">
+        <div class="conteneur">
+            <h2 id="titre-contact" class="section__titre">Contact</h2>
+            <p class="contact__intro">Un projet, un stage ou une question ? Écrivez-moi, je réponds rapidement.</p>
+            <ul class="contact__liste">
+                <li>
+                    <span class="contact__libelle">Email</span>
+                    <a href="mailto:selimidion70@gmail.com">selimidion70@gmail.com</a>
+                </li>
+                <li>
+                    <span class="contact__libelle">Téléphone</span>
+                    <a href="tel:+32489700933">+32&nbsp;489&nbsp;70&nbsp;09&nbsp;33</a>
+                </li>
+                <li>
+                    <span class="contact__libelle">GitHub</span>
+                    <a href="https://github.com/selimidion70-png">github.com/selimidion70-png</a>
+                </li>
+                <!-- LinkedIn : remplacez VOTRE-PROFIL par votre adresse LinkedIn, puis retirez les marques de commentaire
+                <li>
+                    <span class="contact__libelle">LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/VOTRE-PROFIL/">linkedin.com/in/VOTRE-PROFIL</a>
+                </li>
+                -->
+            </ul>
+        </div>
+    </section>
+
+</main>
+
+<footer class="pied">
+    <div class="conteneur">
+        <p>&copy; 2026 Dion Selimi · Développeur Web Front-End</p>
+    </div>
+</footer>
+
+</body>
+</html>
