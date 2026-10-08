@@ -7,7 +7,7 @@ Site statique en **HTML et CSS** (sans framework ni JavaScript), responsive, acc
 ## Contenu
 
 - Présentation, à propos, compétences
-- Projets : **BE CHILL** (site PHP MVC avec réservation et paiement) et **Aegis Bank** (néobanque mobile-first)
+- Projets : **BE CHILL** (site PHP MVC avec réservation et paiement), **Be Chill Landing page** (hackathon EFP en équipe) et **Aegis Bank** (néobanque mobile-first)
 - Parcours et contact
 
 ## Modifier

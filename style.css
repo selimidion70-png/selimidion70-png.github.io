@@ -511,3 +511,10 @@ p {
         scroll-padding-top: 7rem;
     }
 }
+
+/* Plusieurs liens côte à côte sous un projet */
+.projet__liens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+}
