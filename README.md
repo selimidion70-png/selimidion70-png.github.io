@@ -20,3 +20,4 @@ Site statique en **HTML et CSS** (sans framework ni JavaScript), responsive, acc
 
 - Email : selimidion70@gmail.com
 - GitHub : [selimidion70-png](https://github.com/selimidion70-png)
+- LinkedIn : [dion-selimi-662878340](https://www.linkedin.com/in/dion-selimi-662878340/)
