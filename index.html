@@ -96,17 +96,12 @@
             <h2 id="titre-a-propos" class="section__titre">À propos</h2>
             <div class="texte">
                 <p class="texte__chapeau">
-                    Je suis en deuxième année de formation de développeur web front-end à l'EFP Bruxelles
-                    et j'ai obtenu 45/50 à mon examen d'atelier.
+                    J'aime construire des interfaces simples à utiliser, et comprendre ce qui se passe derrière :
+                    base de données, sécurité, paiement, emails.
                 </p>
                 <p>
-                    J'aime construire des interfaces simples à utiliser, mais aussi comprendre ce qui se passe derrière :
-                    base de données, sécurité, formulaires, emails…
-                </p>
-                <p>
-                    Mes projets vont de la page vitrine <em>mobile-first</em> au site complet avec espace
-                    d'administration, réservation en ligne et paiement. Je soigne particulièrement
-                    l'accessibilité, le code propre et lisible, et le travail avec Git.
+                    Je cherche un stage où je peux travailler sur de vrais projets, en front-end comme en PHP,
+                    et apprendre au contact d'une équipe.
                 </p>
             </div>
         </div>
@@ -153,13 +148,7 @@
     <!-- ===== Projets ===== -->
     <section id="projets" class="section section--projets" aria-labelledby="titre-projets">
         <div class="conteneur">
-            <div class="section__grille section__grille--entete">
-                <h2 id="titre-projets" class="section__titre">Projets</h2>
-                <p class="section__intro">
-                    Trois sites complets en PHP et MySQL, et deux pages front-end mobile-first.
-                    Pour chaque projet : le problème principal que j'ai dû résoudre.
-                </p>
-            </div>
+            <h2 id="titre-projets" class="section__titre projets__titre">Projets</h2>
 
             <!-- Projet principal -->
             <article class="projet projet--vedette" aria-labelledby="projet-bechill">
@@ -173,18 +162,13 @@
                         <div><dt>Cadre</dt><dd>Projet d'atelier, EFP Bruxelles</dd></div>
                         <div><dt>Résultat</dt><dd>45/50 à l'examen, enrichi ensuite</dd></div>
                     </dl>
-                    <p>
-                        Site administrable pour un salon de massage (fictif), en
-                        <strong>PHP avec une architecture MVC</strong> et une base MySQL.
-                    </p>
                     <p class="projet__defi">
                         <strong>Le défi :</strong> empêcher deux clients de réserver le même créneau,
                         en respectant les horaires d'ouverture, puis relier la réservation au paiement en ligne.
                     </p>
                     <ul class="puces">
                         <li>Réservation en ligne, paiement Stripe ou sur place, emails de confirmation</li>
-                        <li>Administration avec deux rôles (administrateur / éditeur)</li>
-                        <li>Sécurité et RGPD : jetons CSRF, mots de passe hachés, suppression des anciennes données</li>
+                        <li>Sécurité et RGPD : jetons CSRF, mots de passe hachés, rôles administrateur / éditeur</li>
                     </ul>
                     <ul class="etiquettes" aria-label="Technologies">
                         <li>PHP 8</li><li>MySQL</li><li>MVC</li><li>Stripe</li><li>HTML</li><li>CSS</li>
@@ -206,20 +190,15 @@
                         <h3 id="projet-dripfit">DripFit.ks – Boutique de vêtements</h3>
                         <dl class="projet__infos">
                             <div><dt>Cadre</dt><dd>Projet personnel</dd></div>
-                            <div><dt>Statut</dt><dd>Pour un vrai commerce, en cours de développement</dd></div>
+                            <div><dt>Statut</dt><dd>Vrai commerce, en développement</dd></div>
                         </dl>
-                        <p>
-                            Boutique de vêtements de sport et streetwear en <strong>PHP 8, MVC maison</strong>
-                            (sans framework) et MySQL. Site en albanais, pour le Kosovo, l'Albanie et la Macédoine du Nord.
-                        </p>
                         <p class="projet__defi">
                             <strong>Le défi :</strong> ne jamais vendre un article épuisé. Chaque combinaison
                             taille × couleur a son stock, vérifié et mis à jour dans une transaction.
                         </p>
                         <ul class="puces">
-                            <li>Panier, commande et paiement à la livraison</li>
+                            <li>Site en albanais : panier, commande et paiement à la livraison</li>
                             <li>Administration des produits, variantes, stock et commandes</li>
-                            <li>Une commande annulée remet automatiquement le stock</li>
                         </ul>
                         <ul class="etiquettes" aria-label="Technologies">
                             <li>PHP 8</li><li>MySQL</li><li>PDO</li><li>MVC</li><li>E-commerce</li>
@@ -239,20 +218,15 @@
                         <h3 id="projet-parfumeria">Parfumeria – Boutique de parfums</h3>
                         <dl class="projet__infos">
                             <div><dt>Cadre</dt><dd>Projet personnel</dd></div>
-                            <div><dt>Statut</dt><dd>Pour un vrai commerce, en cours de développement</dd></div>
+                            <div><dt>Statut</dt><dd>Vrai commerce, en développement</dd></div>
                         </dl>
-                        <p>
-                            Boutique de parfums en <strong>PHP 8, MVC maison</strong> (sans framework) et MySQL.
-                            Site en albanais, pour le Kosovo, l'Albanie et la Macédoine du Nord.
-                        </p>
                         <p class="projet__defi">
                             <strong>Le défi :</strong> un même parfum existe en plusieurs contenances, chacune avec
                             son prix, sa promotion et son stock, et les codes promo sont revérifiés à la commande.
                         </p>
                         <ul class="puces">
-                            <li>Recherche, filtres par marque et note olfactive, liste d'envies</li>
+                            <li>Site en albanais : filtres par marque et note olfactive, liste d'envies</li>
                             <li>Comptes clients avec mot de passe oublié sécurisé</li>
-                            <li>Administration avec statistiques des ventes et bons de commande</li>
                         </ul>
                         <ul class="etiquettes" aria-label="Technologies">
                             <li>PHP 8</li><li>MySQL</li><li>PDO</li><li>MVC</li><li>E-commerce</li>
@@ -274,10 +248,6 @@
                             <div><dt>Cadre</dt><dd>Hackathon EFP, en équipe</dd></div>
                             <div><dt>Équipe</dt><dd>7 designers et 3 développeurs</dd></div>
                         </dl>
-                        <p>
-                            Landing page d'un salon de massage à Uccle. J'étais l'<strong>un des trois développeurs</strong>
-                            chargés de transformer les maquettes des designers en site.
-                        </p>
                         <p class="projet__defi">
                             <strong>Le défi :</strong> respecter fidèlement les maquettes, à trois
                             développeurs qui travaillent en même temps sur le même dépôt Git.
@@ -285,7 +255,6 @@
                         <ul class="puces">
                             <li><strong>Mes parties :</strong> header avec menu burger, section formation, formulaire de contact et footer</li>
                             <li>Approche mobile-first, attributs ARIA</li>
-                            <li>Mise en ligne sur GitHub Pages</li>
                         </ul>
                         <ul class="etiquettes" aria-label="Technologies">
                             <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git en équipe</li>
@@ -308,9 +277,6 @@
                             <div><dt>Cadre</dt><dd>Projet d'examen</dd></div>
                             <div><dt>Partie</dt><dd>Front-end</dd></div>
                         </dl>
-                        <p>
-                            Page d'accueil <strong>mobile-first</strong> pour une néobanque éthique et transparente.
-                        </p>
                         <p class="projet__defi">
                             <strong>Le défi :</strong> faire tenir tout l'écran d'accueil sur un téléphone, sans défilement,
                             avec un code CSS organisé et facile à faire évoluer.
@@ -318,7 +284,6 @@
                         <ul class="puces">
                             <li>Menu burger et navigation adaptée au mobile</li>
                             <li>Animations et effets lumineux en CSS</li>
-                            <li>Variables CSS rangées par thème (couleurs, typographie, boutons)</li>
                         </ul>
                         <ul class="etiquettes" aria-label="Technologies">
                             <li>HTML</li><li>CSS</li><li>Mobile-first</li><li>Animations</li>
@@ -342,7 +307,6 @@
                 <div>
                     <h3>Développeur Web Front-End</h3>
                     <p class="parcours__lieu">EFP Bruxelles, formation en alternance</p>
-                    <p>Intégration HTML/CSS, JavaScript, React, PHP et MySQL, accessibilité, gestion de projet et Git.</p>
                 </div>
             </div>
         </div>

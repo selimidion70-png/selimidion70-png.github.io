@@ -330,12 +330,6 @@ p {
     letter-spacing: -0.025em;
 }
 
-.section__intro {
-    max-width: 36rem;
-    margin: 0;
-    color: var(--doux);
-    font-size: 1.125rem;
-}
 
 /* ---------- 6. À propos ---------- */
 .texte {
@@ -384,8 +378,8 @@ p {
 }
 
 /* ---------- 8. Projets ---------- */
-.section__grille--entete {
-    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+.projets__titre {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
 }
 
 .projet__image {
@@ -530,12 +524,7 @@ p {
 }
 
 .parcours__lieu {
-    margin: 0.2rem 0 0.75rem;
-    font-weight: 500;
-}
-
-.parcours p:last-child {
-    margin: 0;
+    margin: 0.2rem 0 0;
     color: var(--doux);
 }
 
@@ -697,10 +686,6 @@ p {
         grid-template-columns: 4fr 8fr;
         gap: 2rem clamp(2rem, 5vw, 4rem);
         align-items: start;
-    }
-
-    .section__grille--entete {
-        align-items: end;
     }
 
     .competences {
