@@ -10,7 +10,7 @@ Site statique en **HTML et CSS** (sans framework ni JavaScript), écrit en **mob
 
 - Présentation, fiche « disponible pour un stage », à propos, compétences
 - Projets :
-  - **BE CHILL** – site PHP MVC avec réservation et paiement Stripe (examen d'atelier, 45/50)
+  - **BE CHILL** – site PHP MVC avec réservation et paiement Stripe (examen d'atelier, 45/50), en ligne : https://dion.alwaysdata.net/
   - **DripFit.ks** – boutique de vêtements en PHP MVC (stock par taille et couleur)
   - **Parfumeria** – boutique de parfums en PHP MVC (contenances, codes promo)
   - **Be Chill Landing page** – hackathon EFP en équipe
