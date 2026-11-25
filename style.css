@@ -13,18 +13,18 @@
 
 /* ---------- 1. Couleurs et réglages ---------- */
 :root {
-    /* Thème sombre bleu pétrole, le même sur tous les appareils */
+    /* Thème bleu marine et cyan, le même sur tous les appareils */
     color-scheme: dark;
 
-    --papier:       #0f1b1e;   /* fond de la page */
-    --surface:      #16262a;   /* fiche, cadres */
-    --encre:        #e9f0ee;   /* texte principal */
-    --doux:         #a3b3b5;   /* texte secondaire */
-    --trait:        #27393d;   /* bordures et séparateurs */
-    --accent:       #5ec8bd;   /* turquoise */
-    --accent-pale:  #183a3a;
-    --bande:        #0b2a2b;   /* fond de la section contact */
-    --bande-texte:  #e9f0ee;
+    --papier:       #0f2142;   /* fond de la page */
+    --surface:      #17305a;   /* fiche, cadres */
+    --encre:        #eef4ff;   /* texte principal */
+    --doux:         #b3c3de;   /* texte secondaire */
+    --trait:        #26406d;   /* bordures et séparateurs */
+    --accent:       #5fd0f5;   /* cyan */
+    --accent-pale:  #1b4266;
+    --bande:        #0a1830;   /* fond de la section contact */
+    --bande-texte:  #eef4ff;
 
     --police:       'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     --largeur:      1160px;
@@ -54,6 +54,7 @@ body {
     color: var(--encre);
     font-family: var(--police);
     font-size: 1.0625rem;
+    font-weight: 500;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -84,7 +85,7 @@ h1, h2, h3 {
     margin: 0;
     text-wrap: balance;
     line-height: 1.15;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 p {
@@ -135,7 +136,7 @@ p {
 .logo {
     color: var(--encre);
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: 800;
     letter-spacing: -0.01em;
     text-decoration: none;
 }
@@ -158,7 +159,7 @@ p {
 .nav a {
     color: var(--doux);
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
 }
 
@@ -179,7 +180,7 @@ p {
 .hero__nom {
     margin-left: -0.05em; /* aligne optiquement le D avec le texte en dessous */
     font-size: clamp(3.4rem, 10vw, 7.5rem);
-    font-weight: 800;
+    font-weight: 900;
     line-height: 0.92;
     letter-spacing: -0.045em;
 }
@@ -189,7 +190,7 @@ p {
     margin: 1.5rem 0 1.25rem;
     text-wrap: balance;
     font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: -0.01em;
 }
@@ -213,7 +214,7 @@ p {
     border: 1.5px solid var(--encre);
     border-radius: var(--rayon);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     transition: background-color 0.15s ease, color 0.15s ease;
 }
@@ -252,7 +253,7 @@ p {
     margin: 0 0 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--trait);
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .fiche__statut::before {
@@ -284,7 +285,7 @@ p {
 
 .fiche__liste dd {
     margin: 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .fiche__liste sup {
@@ -330,7 +331,7 @@ p {
 .texte__chapeau {
     color: var(--encre);
     font-size: clamp(1.25rem, 2.2vw, 1.5rem);
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.4;
     letter-spacing: -0.01em;
 }
@@ -399,7 +400,7 @@ p {
 
 .projet__texte strong {
     color: var(--encre);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* « Le défi » : le problème principal du projet */
@@ -427,7 +428,7 @@ p {
 .projet__infos dd {
     margin: 0;
     font-size: 0.95rem;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.35;
 }
 
@@ -462,7 +463,7 @@ p {
     border-radius: 4px;
     color: var(--doux);
     font-size: 0.82rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .projet__liens {
@@ -470,7 +471,7 @@ p {
     flex-wrap: wrap;
     gap: 0.5rem 1.5rem;
     margin: 0;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* Projet principal : en mobile, l'image puis le texte */
@@ -505,7 +506,7 @@ p {
     margin: 0;
     padding-top: 0.15rem;
     color: var(--doux);
-    font-weight: 500;
+    font-weight: 600;
     font-variant-numeric: tabular-nums;
 }
 
@@ -550,6 +551,7 @@ p {
     font-size: clamp(1.4rem, 4vw, 2.4rem);
     font-weight: 600;
     letter-spacing: -0.02em;
+    font-weight: 700;
     overflow-wrap: anywhere;
 }
 
@@ -579,7 +581,7 @@ p {
 }
 
 .contact__liste a {
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
     overflow-wrap: anywhere;
 }
