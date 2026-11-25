@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dion Selimi – Développeur Web Front-End</title>
-    <meta name="description" content="Portfolio de Dion Selimi, développeur web front-end en formation à l'EFP Bruxelles : HTML, CSS, JavaScript, PHP, MySQL. Disponible pour un stage.">
+    <title>Dion Selimi – Développeur web, front-end et PHP</title>
+    <meta name="description" content="Portfolio de Dion Selimi, développeur web en formation à l'EFP Bruxelles (front-end, PHP et MySQL). Disponible pour un stage à Bruxelles.">
+    <meta name="author" content="Dion Selimi">
+    <link rel="canonical" href="https://selimidion70-png.github.io/">
+
+    <!-- Aperçu quand le lien est partagé (LinkedIn, WhatsApp, email…) -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_BE">
+    <meta property="og:url" content="https://selimidion70-png.github.io/">
+    <meta property="og:title" content="Dion Selimi – Développeur web, front-end et PHP">
+    <meta property="og:description" content="Développeur web en formation à l'EFP Bruxelles, disponible pour un stage. Projets en PHP, MySQL, HTML et CSS.">
+    <meta property="og:image" content="https://selimidion70-png.github.io/img/apercu-partage.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="color-scheme" content="light dark">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='%230d6e6e'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +51,7 @@
         <div class="conteneur hero__grille">
             <div class="hero__texte">
                 <h1 id="titre-hero" class="hero__nom">Dion Selimi</h1>
-                <p class="hero__metier">Développeur web front-end en formation à l'EFP Bruxelles</p>
+                <p class="hero__metier">Développeur web, front-end et PHP, en formation à l'EFP Bruxelles</p>
                 <p class="hero__intro">
                     Je construis des sites accessibles et responsives, de l'intégration HTML, CSS et JavaScript
                     jusqu'au back-end en PHP et MySQL.
@@ -143,8 +156,8 @@
             <div class="section__grille section__grille--entete">
                 <h2 id="titre-projets" class="section__titre">Projets</h2>
                 <p class="section__intro">
-                    Cinq projets réalisés en formation, en équipe ou à titre personnel :
-                    des sites PHP complets aux pages front-end mobile-first.
+                    Trois sites complets en PHP et MySQL, et deux pages front-end mobile-first.
+                    Pour chaque projet : le problème principal que j'ai dû résoudre.
                 </p>
             </div>
 
@@ -161,18 +174,20 @@
                         <div><dt>Résultat</dt><dd>45/50 à l'examen, enrichi ensuite</dd></div>
                     </dl>
                     <p>
-                        Site complet et administrable pour un salon de massage (fictif) à Bruxelles,
-                        développé en <strong>PHP avec une architecture MVC</strong> et une base MySQL.
+                        Site administrable pour un salon de massage (fictif), en
+                        <strong>PHP avec une architecture MVC</strong> et une base MySQL.
+                    </p>
+                    <p class="projet__defi">
+                        <strong>Le défi :</strong> empêcher deux clients de réserver le même créneau,
+                        en respectant les horaires d'ouverture, puis relier la réservation au paiement en ligne.
                     </p>
                     <ul class="puces">
-                        <li>Catalogue des soins avec recherche, filtres et photos</li>
-                        <li>Réservation en ligne qui tient compte des créneaux déjà pris et des horaires</li>
-                        <li>Paiement en ligne (Stripe) ou sur place, emails de confirmation</li>
-                        <li>Espace d'administration avec rôles (administrateur / éditeur)</li>
-                        <li>RGPD, protection CSRF, mots de passe chiffrés, HTML validé</li>
+                        <li>Réservation en ligne, paiement Stripe ou sur place, emails de confirmation</li>
+                        <li>Administration avec deux rôles (administrateur / éditeur)</li>
+                        <li>Sécurité et RGPD : jetons CSRF, mots de passe hachés, suppression des anciennes données</li>
                     </ul>
                     <ul class="etiquettes" aria-label="Technologies">
-                        <li>PHP</li><li>MySQL</li><li>MVC</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+                        <li>PHP 8</li><li>MySQL</li><li>MVC</li><li>Stripe</li><li>HTML</li><li>CSS</li>
                     </ul>
                     <p class="projet__liens">
                         <a href="https://github.com/selimidion70-png/Atelier-Bechill">Voir le code sur GitHub</a>
@@ -182,63 +197,68 @@
 
             <div class="projets-grille">
 
-                <article class="projet" aria-labelledby="projet-parfumeria">
-                    <figure class="projet__image">
-                        <img src="img/parfumeria-accueil.jpg" width="1440" height="900" loading="lazy"
-                             alt="Page d'accueil de Parfumeria : bandeau brun foncé, titre « Aroma që flet para teje » et flacon de parfum doré.">
-                    </figure>
-                    <div class="projet__texte">
-                        <h3 id="projet-parfumeria">Parfumeria – Boutique de parfums en ligne</h3>
-                        <dl class="projet__infos">
-                            <div><dt>Cadre</dt><dd>Projet personnel</dd></div>
-                            <div><dt>Statut</dt><dd>Pour un vrai commerce, en cours de développement</dd></div>
-                        </dl>
-                        <p>
-                            Boutique en ligne pour un petit commerce de parfums (Kosovo, Albanie, Macédoine du Nord),
-                            en <strong>PHP 8 avec une architecture MVC maison</strong> et MySQL. Site en albanais.
-                        </p>
-                        <ul class="puces">
-                            <li>Catalogue avec recherche, filtres par marque et par note olfactive, tri et promotions</li>
-                            <li>Plusieurs contenances par parfum, chacune avec son prix et son stock</li>
-                            <li>Panier, codes promo, liste d'envies, paiement à la livraison</li>
-                            <li>Comptes clients avec mot de passe oublié par email</li>
-                            <li>Administration : produits, photos, commandes, codes promo et statistiques</li>
-                        </ul>
-                        <ul class="etiquettes" aria-label="Technologies">
-                            <li>PHP</li><li>MySQL</li><li>MVC</li><li>PDO</li><li>CSS</li><li>E-commerce</li>
-                        </ul>
-                        <p class="projet__liens">
-                            <a href="https://github.com/selimidion70-png/parfumeria">Voir le code sur GitHub</a>
-                        </p>
-                    </div>
-                </article>
-
                 <article class="projet" aria-labelledby="projet-dripfit">
                     <figure class="projet__image">
                         <img src="img/dripfit-accueil.jpg" width="1440" height="900" loading="lazy"
                              alt="Page d'accueil de DripFit.ks : logo noir et vert fluo, menu des catégories et grille de vêtements avec leurs prix.">
                     </figure>
                     <div class="projet__texte">
-                        <h3 id="projet-dripfit">DripFit.ks – Boutique de vêtements en ligne</h3>
+                        <h3 id="projet-dripfit">DripFit.ks – Boutique de vêtements</h3>
                         <dl class="projet__infos">
                             <div><dt>Cadre</dt><dd>Projet personnel</dd></div>
                             <div><dt>Statut</dt><dd>Pour un vrai commerce, en cours de développement</dd></div>
                         </dl>
                         <p>
-                            Boutique en ligne de vêtements de sport et streetwear, en
-                            <strong>PHP 8 avec une architecture MVC maison</strong> et MySQL. Site en albanais.
+                            Boutique de vêtements de sport et streetwear en <strong>PHP 8, MVC maison</strong>
+                            (sans framework) et MySQL. Site en albanais, pour le Kosovo, l'Albanie et la Macédoine du Nord.
+                        </p>
+                        <p class="projet__defi">
+                            <strong>Le défi :</strong> ne jamais vendre un article épuisé. Chaque combinaison
+                            taille × couleur a son stock, vérifié et mis à jour dans une transaction.
                         </p>
                         <ul class="puces">
-                            <li>Produits déclinés en tailles (XS → XXL) et couleurs, avec un stock pour chaque variante</li>
-                            <li>Panier et commande avec paiement à la livraison</li>
-                            <li>Stock vérifié et mis à jour dans des transactions (une annulation remet le stock)</li>
-                            <li>Administration : produits, photos, variantes, stock et suivi des commandes</li>
+                            <li>Panier, commande et paiement à la livraison</li>
+                            <li>Administration des produits, variantes, stock et commandes</li>
+                            <li>Une commande annulée remet automatiquement le stock</li>
                         </ul>
                         <ul class="etiquettes" aria-label="Technologies">
-                            <li>PHP</li><li>MySQL</li><li>MVC</li><li>PDO</li><li>CSS</li><li>E-commerce</li>
+                            <li>PHP 8</li><li>MySQL</li><li>PDO</li><li>MVC</li><li>E-commerce</li>
                         </ul>
                         <p class="projet__liens">
                             <a href="https://github.com/selimidion70-png/dripfit.ks">Voir le code sur GitHub</a>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="projet" aria-labelledby="projet-parfumeria">
+                    <figure class="projet__image">
+                        <img src="img/parfumeria-accueil.jpg" width="1440" height="900" loading="lazy"
+                             alt="Page d'accueil de Parfumeria : bandeau brun foncé, titre « Aroma që flet para teje » et flacon de parfum doré.">
+                    </figure>
+                    <div class="projet__texte">
+                        <h3 id="projet-parfumeria">Parfumeria – Boutique de parfums</h3>
+                        <dl class="projet__infos">
+                            <div><dt>Cadre</dt><dd>Projet personnel</dd></div>
+                            <div><dt>Statut</dt><dd>Pour un vrai commerce, en cours de développement</dd></div>
+                        </dl>
+                        <p>
+                            Boutique de parfums en <strong>PHP 8, MVC maison</strong> (sans framework) et MySQL.
+                            Site en albanais, pour le Kosovo, l'Albanie et la Macédoine du Nord.
+                        </p>
+                        <p class="projet__defi">
+                            <strong>Le défi :</strong> un même parfum existe en plusieurs contenances, chacune avec
+                            son prix, sa promotion et son stock, et les codes promo sont revérifiés à la commande.
+                        </p>
+                        <ul class="puces">
+                            <li>Recherche, filtres par marque et note olfactive, liste d'envies</li>
+                            <li>Comptes clients avec mot de passe oublié sécurisé</li>
+                            <li>Administration avec statistiques des ventes et bons de commande</li>
+                        </ul>
+                        <ul class="etiquettes" aria-label="Technologies">
+                            <li>PHP 8</li><li>MySQL</li><li>PDO</li><li>MVC</li><li>E-commerce</li>
+                        </ul>
+                        <p class="projet__liens">
+                            <a href="https://github.com/selimidion70-png/parfumeria">Voir le code sur GitHub</a>
                         </p>
                     </div>
                 </article>
@@ -258,13 +278,17 @@
                             Landing page d'un salon de massage à Uccle. J'étais l'<strong>un des trois développeurs</strong>
                             chargés de transformer les maquettes des designers en site.
                         </p>
+                        <p class="projet__defi">
+                            <strong>Le défi :</strong> respecter fidèlement les maquettes, à trois
+                            développeurs qui travaillent en même temps sur le même dépôt Git.
+                        </p>
                         <ul class="puces">
                             <li><strong>Mes parties :</strong> header avec menu burger, section formation, formulaire de contact et footer</li>
-                            <li>En équipe : approche mobile-first, hero vidéo, carrousel d'avis, FAQ, horaires et attributs ARIA</li>
-                            <li>Travail d'équipe avec Git et mise en ligne sur GitHub Pages</li>
+                            <li>Approche mobile-first, attributs ARIA</li>
+                            <li>Mise en ligne sur GitHub Pages</li>
                         </ul>
                         <ul class="etiquettes" aria-label="Technologies">
-                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Travail d'équipe</li>
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git en équipe</li>
                         </ul>
                         <p class="projet__liens">
                             <a href="https://thierrybwuzure.github.io/bechill_landing_page/">Voir le site en ligne</a>
@@ -285,14 +309,16 @@
                             <div><dt>Partie</dt><dd>Front-end</dd></div>
                         </dl>
                         <p>
-                            Page d'accueil <strong>mobile-first</strong> pour une néobanque éthique et transparente :
-                            interface épurée, animations fluides et design responsive.
+                            Page d'accueil <strong>mobile-first</strong> pour une néobanque éthique et transparente.
+                        </p>
+                        <p class="projet__defi">
+                            <strong>Le défi :</strong> faire tenir tout l'écran d'accueil sur un téléphone, sans défilement,
+                            avec un code CSS organisé et facile à faire évoluer.
                         </p>
                         <ul class="puces">
                             <li>Menu burger et navigation adaptée au mobile</li>
-                            <li>Appel à l'action et offre promotionnelle mis en avant</li>
                             <li>Animations et effets lumineux en CSS</li>
-                            <li>Variables CSS organisées par thème (couleurs, typographie, boutons)</li>
+                            <li>Variables CSS rangées par thème (couleurs, typographie, boutons)</li>
                         </ul>
                         <ul class="etiquettes" aria-label="Technologies">
                             <li>HTML</li><li>CSS</li><li>Mobile-first</li><li>Animations</li>
@@ -352,7 +378,7 @@
 <footer class="pied">
     <div class="conteneur pied__interieur">
         <p>&copy; 2026 Dion Selimi</p>
-        <p>Développeur Web Front-End</p>
+        <p>Développeur web, front-end et PHP</p>
     </div>
 </footer>
 

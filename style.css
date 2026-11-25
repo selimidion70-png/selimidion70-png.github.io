@@ -8,7 +8,7 @@
    5. Sections   6. À propos   7. Compétences   8. Projets
    9. Parcours   10. Contact   11. Pied de page
    12. Petit mobile (≥ 480px)   13. Tablette (≥ 768px)
-   14. Ordinateur (≥ 1024px)
+   14. Ordinateur (≥ 1024px)   15. Impression / PDF
    ============================================================ */
 
 /* ---------- 1. Couleurs et réglages ---------- */
@@ -418,6 +418,13 @@ p {
     font-weight: 600;
 }
 
+/* « Le défi » : le problème principal du projet */
+.projet__texte > .projet__defi {
+    padding: 0.1rem 0 0.1rem 1rem;
+    border-left: 3px solid var(--accent);
+    color: var(--encre);
+}
+
 /* Cadre, résultat, statut… */
 .projet__infos {
     display: grid;
@@ -705,5 +712,50 @@ p {
         grid-template-columns: 7fr 5fr;
         gap: clamp(2rem, 4vw, 3.5rem);
         align-items: start;
+    }
+}
+
+/* ---------- 15. Impression / PDF ---------- */
+/* Si un recruteur imprime la page ou l'enregistre en PDF */
+@media print {
+    :root {
+        --papier: #fff;
+        --surface: #fff;
+        --encre: #000;
+        --doux: #333;
+        --trait: #bbb;
+        --accent: #0d6e6e;
+        --bande: #fff;
+        --bande-texte: #000;
+    }
+
+    .entete,
+    .lien-evitement,
+    .hero__actions {
+        display: none;
+    }
+
+    .hero,
+    .section,
+    .contact {
+        padding: 1.5rem 0;
+    }
+
+    .section > .conteneur::before {
+        display: none;
+    }
+
+    .projet,
+    .fiche,
+    .competences__groupe {
+        break-inside: avoid;
+    }
+
+    /* Affiche l'adresse des liens vers les projets */
+    .projet__liens a::after {
+        content: " (" attr(href) ")";
+        font-weight: 400;
+        font-size: 0.8em;
+        overflow-wrap: anywhere;
     }
 }
