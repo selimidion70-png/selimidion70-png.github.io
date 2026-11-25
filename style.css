@@ -179,10 +179,10 @@ p {
 
 .hero__nom {
     margin-left: -0.05em; /* aligne optiquement le D avec le texte en dessous */
-    font-size: clamp(3.4rem, 10vw, 7.5rem);
+    font-size: clamp(2.6rem, 6vw, 4.5rem);
     font-weight: 900;
-    line-height: 0.92;
-    letter-spacing: -0.045em;
+    line-height: 1;
+    letter-spacing: -0.035em;
 }
 
 .hero__metier {
@@ -666,7 +666,7 @@ p {
     .hero__grille {
         grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
         gap: clamp(2.5rem, 6vw, 5rem);
-        align-items: end;
+        align-items: center; /* texte centré en hauteur par rapport à la fiche */
     }
 
     .fiche {
