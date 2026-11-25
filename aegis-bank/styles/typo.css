@@ -1,0 +1,15 @@
+/* ----- FONT ----- */
+@font-face {
+    font-family: 'June in rock';
+    src: url('June in Rock - Personal Use.otf');
+}
+
+:root {
+    --font-main: 'June in rock';
+    --font-secondary: 'Poppins', sans-serif;
+    --font-size-h1: clamp(1.5rem, 5vw, 2rem);
+    --font-size-h2: clamp(1rem, 3vw, 1.5rem);
+    --font-size-h3: clamp(0.9rem, 2vw, 1.2rem);
+    --font-size-body: 1rem;
+    --font-size-link: 18px;
+}

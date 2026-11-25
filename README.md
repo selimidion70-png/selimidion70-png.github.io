@@ -14,7 +14,7 @@ Site statique en **HTML et CSS** (sans framework ni JavaScript), écrit en **mob
   - **DripFit.ks** – boutique de vêtements en PHP MVC (stock par taille et couleur)
   - **Parfumeria** – boutique de parfums en PHP MVC (contenances, codes promo)
   - **Be Chill Landing page** – hackathon EFP en équipe
-  - **Aegis Bank** – page d'accueil mobile-first
+  - **Aegis Bank** – page d'accueil mobile-first, en ligne dans le dossier `aegis-bank/` : https://selimidion70-png.github.io/aegis-bank/
 - Parcours et contact
 
 ## Organisation du CSS

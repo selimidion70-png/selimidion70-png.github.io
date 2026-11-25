@@ -1,0 +1,8 @@
+:root {
+    --button-padding: 10px 20px;
+    --button-border-radius: 5px;
+    --button-bg: var(--color-accent);
+    --button-color: var(--color-primary);
+    --button-border: var(--border-width-medium) solid var(--color-border);
+    --button-shadow: var(--shadow-small);
+}

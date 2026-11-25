@@ -1,0 +1,11 @@
+:root {
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 30px;
+    --padding-header: 10px 30px;
+    --height-header: 60px;
+    --border-width-thin: 0.5px;
+    --border-width-medium: 2px;
+    --shadow-small: 3px 3px 10px var(--color-shadow);
+    --shadow-medium: 3px 3px 40px var(--color-shadow);
+}

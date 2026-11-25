@@ -1,0 +1,5 @@
+/* Import de tous les fichiers de variables */
+@import "colors.css";
+@import "typo.css";
+@import "layout.css";
+@import "bouton.css";

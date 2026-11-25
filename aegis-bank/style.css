@@ -1,0 +1,430 @@
+/* Import des variables */
+@import "styles/all-variables.css";
+
+/* ----- APPLY VARIABLE ----- */
+body {
+    font-family: var(--font-secondary);
+    
+}
+
+
+/* ----- RESET GLOBAL ----- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- BODY ----- */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* No-scroll : tout tient dans l'écran mobile */
+    font-family: var(--font-secondary);
+    background: var(--color-background);
+    color: var(--color-text);
+}
+
+/* ----- HEADER ----- */
+header {
+    height: var(--height-header);
+    padding: var(--padding-header);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__aside {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-small);
+}
+
+.header__burger-btn svg {
+    cursor: pointer;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__buttons {
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+/* Animation d’apparition */
+.header-buttons__link {
+    font-size: var(--font-size-link);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-link);
+    padding: 5px 10px; /* Réduit pour mobile */
+    background: transparent;
+    border: var(--button-border);
+    border-radius: var(--button-border-radius);
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
+    opacity: 0;
+    animation: fadeIn 0.6s forwards;
+    transition: all 0.3s ease;
+}
+
+/* Un petit délai pour l’effet "en cascade" */
+.header-buttons__link:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+/* Animation au survol */
+.header-buttons__link:hover {
+    color: var(--color-link-hover);
+    background: rgba(46, 246, 10, 0.1); /* Légère teinte verte transparente */
+    transform: translateY(-3px);
+}
+
+/* Animation smooth */
+.header-buttons__link {
+    transition: all 0.3s ease;
+}
+
+/* Keyframes fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* ----- MAIN ----- */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100% - var(--height-header) - 40px); /* Hauteur totale moins header et footer */
+    padding: var(--spacing-medium);
+    overflow: hidden; /* No-scroll */
+    gap: var(--spacing-medium);
+}
+
+/* ----- HERO SECTION ----- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-medium);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    color: var(--color-text);
+    border: var(--border-width-thin) solid var(--color-text);
+    border-radius: 10px;
+    padding: var(--spacing-small) var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
+    box-shadow: var(--shadow-medium);
+}   
+
+h2 {
+    font-size: var(--font-size-h2);
+    color: #ddd;
+    padding: 8px 16px;
+    margin-bottom: var(--spacing-medium);
+}
+
+
+
+/* ----- CARD ----- */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-small);
+    margin-bottom: var(--spacing-large);
+    animation: slideUp 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    border: var(--border-width-medium) solid var(--color-accent);
+    border-radius: 10px;
+    padding: var(--spacing-medium);
+    background: rgba(255, 255, 255, 0.05); /* léger fond pour encadrement */
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card__cta {
+    padding: var(--button-padding);
+    background-color: var(--button-bg);
+    border-radius: var(--button-border-radius);
+    color: var(--button-color);
+    font-weight: bold;
+    cursor: pointer;
+    border: var(--button-border);
+    box-shadow: var(--button-shadow);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.card__cta:hover {
+    transform: scale(1.05);
+}
+
+.card__offer {
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+}
+
+/* ----- SOCIAL LINKS ----- */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-large);
+    padding: var(--spacing-medium) 0;
+    animation: fadeIn 1s ease-out 1s forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----- LIENS DES ICÔNES ----- */
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px; 
+    height: 40px;
+    border-radius: 20%;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    background-color: transparent; /* Pas de fond CSS, le cercle vient du SVG */
+}
+
+/* Effet au survol */
+.social-links a:hover {
+    transform: scale(1.15);
+    background-color: rgba(255, 255, 255, 0.1); /* léger halo */
+}
+
+
+/* ----- TAILLE SVG ----- */
+.social-links svg {
+    width: 45px;
+    height: 45px;
+}
+
+/* ----- RENFORCER LA VISIBILITÉ DES LOGOS ----- */
+.social-links svg path {
+    filter: drop-shadow(0 0 1.5px rgba(0,0,0,0.7)); /* ombre légère */
+    shape-rendering: crispEdges;
+}
+
+/* ----- FOOTER ----- */
+.footer {
+    height: 30px; /* Plus compact */
+    background: var(--color-background);
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centré pour compacité */
+    padding: 0 var(--spacing-medium);
+    font-size: var(--font-size-body);
+    gap: var(--spacing-small); /* Espace entre éléments */
+}
+
+.footer__legal {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.footer__legal:hover {
+    color: var(--color-link-hover);
+}
+
+/* ----- RESPONSIVE ----- */
+@media (max-width: 400px) {
+    .header-buttons__link {
+        padding: 3px 8px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    h2 {
+        font-size: 16px;
+    }
+}
+/* ===== HEADER FADE IN ===== */
+header {
+    animation: fadeDown 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(-20px);
+}
+@keyframes fadeDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== MENU SLIDE ===== */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #0A1A2F;
+    padding: 40px 20px;
+    transition: left 0.4s ease;
+    z-index: 50;
+}
+.side-menu.open {
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+:root {
+    --color-primary: #191513;
+    --color-secondary: white;
+    --color-accent: #2ef60a;
+    --color-background: linear-gradient(darkblue, rgb(13, 13, 14));
+    --color-text: white;
+    --color-link: #2ef60a;
+    --color-link-hover: #0066ff;
+    --color-border: #20ad20;
+    --color-shadow: chartreuse;
+}
