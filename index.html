@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dion Selimi – Développeur Web Front-End</title>
-    <meta name="description" content="Portfolio de Dion Selimi, développeur web front-end en formation à l'EFP Bruxelles : HTML, CSS, JavaScript, PHP, MySQL.">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e3a8a'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='white'%3EDS%3C/text%3E%3C/svg%3E">
+    <meta name="description" content="Portfolio de Dion Selimi, développeur web front-end en formation à l'EFP Bruxelles : HTML, CSS, JavaScript, PHP, MySQL. Disponible pour un stage.">
+    <meta name="color-scheme" content="light dark">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='22' fill='%230d6e6e'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,10 +18,7 @@
 
 <header class="entete">
     <div class="conteneur entete__interieur">
-        <a href="#accueil" class="logo" aria-label="Dion Selimi – retour en haut">
-            <span class="logo__monogramme" aria-hidden="true">DS</span>
-            <span class="logo__nom">Dion Selimi</span>
-        </a>
+        <a href="#accueil" class="logo">Dion Selimi</a>
         <nav aria-label="Navigation principale">
             <ul class="nav">
                 <li><a href="#a-propos">À propos</a></li>
@@ -37,28 +35,58 @@
 
     <!-- ===== Présentation ===== -->
     <section id="accueil" class="hero" aria-labelledby="titre-hero">
-        <div class="conteneur">
-            <p class="sur-titre">Développeur Web Front-End · EFP Bruxelles</p>
-            <h1 id="titre-hero">Bonjour, je suis <span class="accent">Dion Selimi</span>.</h1>
-            <p class="hero__intro">
-                Développeur Web Frontend | HTML5 • CSS3 • JavaScript • React • PHP |
-                Responsive Design • Intégration API REST • Git/GitHub • Figma
-            </p>
-            <p class="hero__actions">
-                <a class="bouton bouton--plein" href="#projets">Voir mes projets</a>
-                <a class="bouton bouton--contour" href="#contact">Me contacter</a>
-            </p>
+        <div class="conteneur hero__grille">
+            <div class="hero__texte">
+                <h1 id="titre-hero" class="hero__nom">Dion Selimi</h1>
+                <p class="hero__metier">Développeur web front-end en formation à l'EFP Bruxelles</p>
+                <p class="hero__intro">
+                    Je construis des sites accessibles et responsives, de l'intégration HTML, CSS et JavaScript
+                    jusqu'au back-end en PHP et MySQL.
+                </p>
+                <p class="hero__actions">
+                    <a class="bouton bouton--plein" href="#projets">Voir mes projets</a>
+                    <a class="bouton bouton--contour" href="#contact">Me contacter</a>
+                </p>
+            </div>
+
+            <aside class="fiche" aria-label="En bref">
+                <p class="fiche__statut">Disponible pour un stage</p>
+                <dl class="fiche__liste">
+                    <div>
+                        <dt>Jours</dt>
+                        <dd>Mercredi, jeudi et vendredi</dd>
+                    </div>
+                    <div>
+                        <dt>Lieu</dt>
+                        <dd>Bruxelles</dd>
+                    </div>
+                    <div>
+                        <dt>Formation</dt>
+                        <dd>EFP Bruxelles, 2<sup>e</sup> année (2025–2027)</dd>
+                    </div>
+                    <div>
+                        <dt>Examen d'atelier</dt>
+                        <dd>45/50</dd>
+                    </div>
+                    <div>
+                        <dt>Langues</dt>
+                        <dd>Français, anglais (B2), albanais (B2)</dd>
+                    </div>
+                </dl>
+            </aside>
         </div>
     </section>
 
     <!-- ===== À propos ===== -->
     <section id="a-propos" class="section" aria-labelledby="titre-a-propos">
-        <div class="conteneur deux-colonnes">
+        <div class="conteneur section__grille">
             <h2 id="titre-a-propos" class="section__titre">À propos</h2>
             <div class="texte">
+                <p class="texte__chapeau">
+                    Je suis en deuxième année de formation de développeur web front-end à l'EFP Bruxelles
+                    et j'ai obtenu 45/50 à mon examen d'atelier.
+                </p>
                 <p>
-                    Je suis en <strong>deuxième année</strong> de formation de <strong>développeur web front-end à l'EFP Bruxelles</strong> (2025–2027)
-                    et j'ai obtenu <strong>45/50</strong> à mon examen d'atelier.
                     J'aime construire des interfaces simples à utiliser, mais aussi comprendre ce qui se passe derrière :
                     base de données, sécurité, formulaires, emails…
                 </p>
@@ -67,67 +95,71 @@
                     d'administration, réservation en ligne et paiement. Je soigne particulièrement
                     l'accessibilité, le code propre et lisible, et le travail avec Git.
                 </p>
-                <p>
-                    Je cherche un <strong>stage</strong> et je suis disponible les <strong>mercredis, jeudis et vendredis</strong>.
-                </p>
-                <p>
-                    <strong>Langues :</strong> français (langue maternelle), anglais (B2), albanais (B2).
-                </p>
             </div>
         </div>
     </section>
 
     <!-- ===== Compétences ===== -->
-    <section id="competences" class="section section--grise" aria-labelledby="titre-competences">
-        <div class="conteneur">
+    <section id="competences" class="section" aria-labelledby="titre-competences">
+        <div class="conteneur section__grille">
             <h2 id="titre-competences" class="section__titre">Compétences</h2>
-            <div class="grille-competences">
-                <article class="carte-competence">
+            <div class="competences">
+                <div class="competences__groupe">
                     <h3>Front-end</h3>
-                    <ul class="puces">
+                    <ul>
                         <li>HTML5 sémantique</li>
                         <li>CSS3 (Flexbox, Grid, variables)</li>
                         <li>JavaScript</li>
                         <li>React</li>
-                        <li>Responsive design &amp; mobile-first</li>
+                        <li>Responsive design et mobile-first</li>
                         <li>Accessibilité (WCAG)</li>
                     </ul>
-                </article>
-                <article class="carte-competence">
+                </div>
+                <div class="competences__groupe">
                     <h3>Back-end</h3>
-                    <ul class="puces">
+                    <ul>
                         <li>PHP 8 (architecture MVC)</li>
-                        <li>MySQL &amp; PDO</li>
+                        <li>MySQL et PDO</li>
                         <li>Intégration d'API REST</li>
                         <li>Sécurité web (CSRF, mots de passe, sessions)</li>
                     </ul>
-                </article>
-                <article class="carte-competence">
+                </div>
+                <div class="competences__groupe">
                     <h3>Outils</h3>
-                    <ul class="puces">
-                        <li>Git &amp; GitHub</li>
+                    <ul>
+                        <li>Git et GitHub</li>
                         <li>Figma</li>
                         <li>VS Code</li>
                         <li>Laragon</li>
                     </ul>
-                </article>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== Projets ===== -->
-    <section id="projets" class="section" aria-labelledby="titre-projets">
+    <section id="projets" class="section section--projets" aria-labelledby="titre-projets">
         <div class="conteneur">
-            <h2 id="titre-projets" class="section__titre">Projets</h2>
+            <div class="section__grille section__grille--entete">
+                <h2 id="titre-projets" class="section__titre">Projets</h2>
+                <p class="section__intro">
+                    Cinq projets réalisés en formation, en équipe ou à titre personnel :
+                    des sites PHP complets aux pages front-end mobile-first.
+                </p>
+            </div>
 
-            <article class="projet" aria-labelledby="projet-bechill">
+            <!-- Projet principal -->
+            <article class="projet projet--vedette" aria-labelledby="projet-bechill">
                 <figure class="projet__image">
                     <img src="img/bechill-accueil.webp" width="1280" height="800" loading="lazy"
                          alt="Page d'accueil du site BE CHILL : en-tête brun et doré, liste des soins vedettes.">
                 </figure>
                 <div class="projet__texte">
-                    <p class="projet__type">Projet d'atelier · EFP Bruxelles · Examen d'atelier : <strong>45/50</strong> · enrichi après l'examen</p>
                     <h3 id="projet-bechill">BE CHILL – Salon de massage</h3>
+                    <dl class="projet__infos">
+                        <div><dt>Cadre</dt><dd>Projet d'atelier, EFP Bruxelles</dd></div>
+                        <div><dt>Résultat</dt><dd>45/50 à l'examen, enrichi ensuite</dd></div>
+                    </dl>
                     <p>
                         Site complet et administrable pour un salon de massage (fictif) à Bruxelles,
                         développé en <strong>PHP avec une architecture MVC</strong> et une base MySQL.
@@ -139,152 +171,166 @@
                         <li>Espace d'administration avec rôles (administrateur / éditeur)</li>
                         <li>RGPD, protection CSRF, mots de passe chiffrés, HTML validé</li>
                     </ul>
-                    <ul class="etiquettes">
+                    <ul class="etiquettes" aria-label="Technologies">
                         <li>PHP</li><li>MySQL</li><li>MVC</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
                     </ul>
                     <p class="projet__liens">
-                        <a class="lien-fleche" href="https://github.com/selimidion70-png/Atelier-Bechill">Voir le code sur GitHub</a>
+                        <a href="https://github.com/selimidion70-png/Atelier-Bechill">Voir le code sur GitHub</a>
                     </p>
                 </div>
             </article>
 
-            <article class="projet projet--inverse" aria-labelledby="projet-parfumeria">
-                <figure class="projet__image">
-                    <img src="img/parfumeria-accueil.jpg" width="1440" height="900" loading="lazy"
-                         alt="Page d'accueil de Parfumeria : bandeau brun foncé, titre « Aroma që flet para teje » et flacon de parfum doré.">
-                </figure>
-                <div class="projet__texte">
-                    <p class="projet__type">Projet personnel · Boutique réelle en cours de développement</p>
-                    <h3 id="projet-parfumeria">Parfumeria – Boutique de parfums en ligne</h3>
-                    <p>
-                        Boutique en ligne complète pour un petit commerce de parfums (Kosovo, Albanie, Macédoine du Nord),
-                        développée en <strong>PHP 8 avec une architecture MVC maison</strong> et une base MySQL. Site en albanais.
-                    </p>
-                    <ul class="puces">
-                        <li>Catalogue avec recherche, filtres par marque et par note olfactive, tri et promotions</li>
-                        <li>Plusieurs contenances par parfum, chacune avec son prix et son stock</li>
-                        <li>Panier, codes promo, liste d'envies, paiement à la livraison</li>
-                        <li>Comptes clients avec mot de passe oublié par email</li>
-                        <li>Administration : produits, photos, commandes, codes promo et statistiques</li>
-                    </ul>
-                    <ul class="etiquettes">
-                        <li>PHP</li><li>MySQL</li><li>MVC</li><li>PDO</li><li>CSS</li><li>E-commerce</li>
-                    </ul>
-                    <p class="projet__liens">
-                        <a class="lien-fleche" href="https://github.com/selimidion70-png/parfumeria">Voir le code sur GitHub</a>
-                    </p>
-                </div>
-            </article>
+            <div class="projets-grille">
 
-            <article class="projet" aria-labelledby="projet-dripfit">
-                <figure class="projet__image">
-                    <img src="img/dripfit-accueil.jpg" width="1440" height="900" loading="lazy"
-                         alt="Page d'accueil de DripFit.ks : logo noir et vert fluo, menu des catégories et grille de vêtements avec leurs prix.">
-                </figure>
-                <div class="projet__texte">
-                    <p class="projet__type">Projet personnel · Boutique réelle en cours de développement</p>
-                    <h3 id="projet-dripfit">DripFit.ks – Boutique de vêtements en ligne</h3>
-                    <p>
-                        Boutique en ligne de vêtements de sport et streetwear, développée en
-                        <strong>PHP 8 avec une architecture MVC maison</strong> et une base MySQL. Site en albanais.
-                    </p>
-                    <ul class="puces">
-                        <li>Produits déclinés en tailles (XS → XXL) et couleurs, avec un stock pour chaque variante</li>
-                        <li>Panier et commande avec paiement à la livraison</li>
-                        <li>Stock vérifié et mis à jour dans des transactions (une annulation remet le stock)</li>
-                        <li>Administration : produits, photos, variantes, stock et suivi des commandes</li>
-                    </ul>
-                    <ul class="etiquettes">
-                        <li>PHP</li><li>MySQL</li><li>MVC</li><li>PDO</li><li>CSS</li><li>E-commerce</li>
-                    </ul>
-                    <p class="projet__liens">
-                        <a class="lien-fleche" href="https://github.com/selimidion70-png/dripfit.ks">Voir le code sur GitHub</a>
-                    </p>
-                </div>
-            </article>
+                <article class="projet" aria-labelledby="projet-parfumeria">
+                    <figure class="projet__image">
+                        <img src="img/parfumeria-accueil.jpg" width="1440" height="900" loading="lazy"
+                             alt="Page d'accueil de Parfumeria : bandeau brun foncé, titre « Aroma që flet para teje » et flacon de parfum doré.">
+                    </figure>
+                    <div class="projet__texte">
+                        <h3 id="projet-parfumeria">Parfumeria – Boutique de parfums en ligne</h3>
+                        <dl class="projet__infos">
+                            <div><dt>Cadre</dt><dd>Projet personnel</dd></div>
+                            <div><dt>Statut</dt><dd>Pour un vrai commerce, en cours de développement</dd></div>
+                        </dl>
+                        <p>
+                            Boutique en ligne pour un petit commerce de parfums (Kosovo, Albanie, Macédoine du Nord),
+                            en <strong>PHP 8 avec une architecture MVC maison</strong> et MySQL. Site en albanais.
+                        </p>
+                        <ul class="puces">
+                            <li>Catalogue avec recherche, filtres par marque et par note olfactive, tri et promotions</li>
+                            <li>Plusieurs contenances par parfum, chacune avec son prix et son stock</li>
+                            <li>Panier, codes promo, liste d'envies, paiement à la livraison</li>
+                            <li>Comptes clients avec mot de passe oublié par email</li>
+                            <li>Administration : produits, photos, commandes, codes promo et statistiques</li>
+                        </ul>
+                        <ul class="etiquettes" aria-label="Technologies">
+                            <li>PHP</li><li>MySQL</li><li>MVC</li><li>PDO</li><li>CSS</li><li>E-commerce</li>
+                        </ul>
+                        <p class="projet__liens">
+                            <a href="https://github.com/selimidion70-png/parfumeria">Voir le code sur GitHub</a>
+                        </p>
+                    </div>
+                </article>
 
-            <article class="projet projet--inverse" aria-labelledby="projet-landing">
-                <figure class="projet__image">
-                    <img src="img/bechill-landing.webp" width="1280" height="800" loading="lazy"
-                         alt="Landing page Be Chill : photo de massage en plein écran, logo de mains et titre « Prenez soin de votre esprit en prenant soin de votre corps ».">
-                </figure>
-                <div class="projet__texte">
-                    <p class="projet__type">Projet d'équipe · Hackathon EFP · 7 designers et 3 développeurs</p>
-                    <h3 id="projet-landing">Be Chill – Landing page</h3>
-                    <p>
-                        Landing page d'un salon de massage à Uccle, réalisée lors d'un <strong>hackathon à l'EFP</strong>
-                        en équipe pluridisciplinaire. J'étais l'<strong>un des trois développeurs</strong>, chargés de
-                        transformer les maquettes des designers en site.
-                    </p>
-                    <ul class="puces">
-                        <li><strong>Mes parties :</strong> header avec menu burger, section formation, formulaire de contact et footer</li>
-                        <li>En équipe : approche mobile-first, hero vidéo, carrousel d'avis, FAQ, horaires et attributs ARIA</li>
-                        <li>Travail d'équipe avec Git et mise en ligne sur GitHub Pages</li>
-                    </ul>
-                    <ul class="etiquettes">
-                        <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Travail d'équipe</li>
-                    </ul>
-                    <p class="projet__liens">
-                        <a class="lien-fleche" href="https://thierrybwuzure.github.io/bechill_landing_page/">Voir le site en ligne</a>
-                        <a class="lien-fleche" href="https://github.com/thierrybwuzure/bechill_landing_page">Voir le code sur GitHub</a>
-                    </p>
-                </div>
-            </article>
+                <article class="projet" aria-labelledby="projet-dripfit">
+                    <figure class="projet__image">
+                        <img src="img/dripfit-accueil.jpg" width="1440" height="900" loading="lazy"
+                             alt="Page d'accueil de DripFit.ks : logo noir et vert fluo, menu des catégories et grille de vêtements avec leurs prix.">
+                    </figure>
+                    <div class="projet__texte">
+                        <h3 id="projet-dripfit">DripFit.ks – Boutique de vêtements en ligne</h3>
+                        <dl class="projet__infos">
+                            <div><dt>Cadre</dt><dd>Projet personnel</dd></div>
+                            <div><dt>Statut</dt><dd>Pour un vrai commerce, en cours de développement</dd></div>
+                        </dl>
+                        <p>
+                            Boutique en ligne de vêtements de sport et streetwear, en
+                            <strong>PHP 8 avec une architecture MVC maison</strong> et MySQL. Site en albanais.
+                        </p>
+                        <ul class="puces">
+                            <li>Produits déclinés en tailles (XS → XXL) et couleurs, avec un stock pour chaque variante</li>
+                            <li>Panier et commande avec paiement à la livraison</li>
+                            <li>Stock vérifié et mis à jour dans des transactions (une annulation remet le stock)</li>
+                            <li>Administration : produits, photos, variantes, stock et suivi des commandes</li>
+                        </ul>
+                        <ul class="etiquettes" aria-label="Technologies">
+                            <li>PHP</li><li>MySQL</li><li>MVC</li><li>PDO</li><li>CSS</li><li>E-commerce</li>
+                        </ul>
+                        <p class="projet__liens">
+                            <a href="https://github.com/selimidion70-png/dripfit.ks">Voir le code sur GitHub</a>
+                        </p>
+                    </div>
+                </article>
 
-            <article class="projet" aria-labelledby="projet-aegis">
-                <figure class="projet__image">
-                    <img src="img/aegis-desktop.webp" width="1280" height="800" loading="lazy"
-                         alt="Page d'accueil d'Aegis Bank : fond bleu nuit, titre « La néobanque éthique & transparente » et bouton vert « Télécharger l'app ».">
-                </figure>
-                <div class="projet__texte">
-                    <p class="projet__type">Projet d'examen · Front-end</p>
-                    <h3 id="projet-aegis">Aegis Bank – Néobanque éthique</h3>
-                    <p>
-                        Page d'accueil <strong>mobile-first</strong> pour une néobanque éthique et transparente :
-                        interface épurée, animations fluides et design responsive.
-                    </p>
-                    <ul class="puces">
-                        <li>Menu burger et navigation adaptée au mobile</li>
-                        <li>Appel à l'action et offre promotionnelle mis en avant</li>
-                        <li>Animations et effets lumineux en CSS</li>
-                        <li>Variables CSS organisées par thème (couleurs, typographie, boutons)</li>
-                    </ul>
-                    <ul class="etiquettes">
-                        <li>HTML</li><li>CSS</li><li>Mobile-first</li><li>Animations</li>
-                    </ul>
-                    <p class="projet__liens">
-                        <a class="lien-fleche" href="https://github.com/selimidion70-png/Projet-aegis-bank">Voir le code sur GitHub</a>
-                    </p>
-                </div>
-            </article>
+                <article class="projet" aria-labelledby="projet-landing">
+                    <figure class="projet__image">
+                        <img src="img/bechill-landing.webp" width="1280" height="800" loading="lazy"
+                             alt="Landing page Be Chill : photo de massage en plein écran, logo de mains et titre « Prenez soin de votre esprit en prenant soin de votre corps ».">
+                    </figure>
+                    <div class="projet__texte">
+                        <h3 id="projet-landing">Be Chill – Landing page (hackathon)</h3>
+                        <dl class="projet__infos">
+                            <div><dt>Cadre</dt><dd>Hackathon EFP, en équipe</dd></div>
+                            <div><dt>Équipe</dt><dd>7 designers et 3 développeurs</dd></div>
+                        </dl>
+                        <p>
+                            Landing page d'un salon de massage à Uccle. J'étais l'<strong>un des trois développeurs</strong>
+                            chargés de transformer les maquettes des designers en site.
+                        </p>
+                        <ul class="puces">
+                            <li><strong>Mes parties :</strong> header avec menu burger, section formation, formulaire de contact et footer</li>
+                            <li>En équipe : approche mobile-first, hero vidéo, carrousel d'avis, FAQ, horaires et attributs ARIA</li>
+                            <li>Travail d'équipe avec Git et mise en ligne sur GitHub Pages</li>
+                        </ul>
+                        <ul class="etiquettes" aria-label="Technologies">
+                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Travail d'équipe</li>
+                        </ul>
+                        <p class="projet__liens">
+                            <a href="https://thierrybwuzure.github.io/bechill_landing_page/">Voir le site en ligne</a>
+                            <a href="https://github.com/thierrybwuzure/bechill_landing_page">Voir le code sur GitHub</a>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="projet" aria-labelledby="projet-aegis">
+                    <figure class="projet__image">
+                        <img src="img/aegis-desktop.webp" width="1280" height="800" loading="lazy"
+                             alt="Page d'accueil d'Aegis Bank : fond bleu nuit, titre « La néobanque éthique & transparente » et bouton vert « Télécharger l'app ».">
+                    </figure>
+                    <div class="projet__texte">
+                        <h3 id="projet-aegis">Aegis Bank – Néobanque éthique</h3>
+                        <dl class="projet__infos">
+                            <div><dt>Cadre</dt><dd>Projet d'examen</dd></div>
+                            <div><dt>Partie</dt><dd>Front-end</dd></div>
+                        </dl>
+                        <p>
+                            Page d'accueil <strong>mobile-first</strong> pour une néobanque éthique et transparente :
+                            interface épurée, animations fluides et design responsive.
+                        </p>
+                        <ul class="puces">
+                            <li>Menu burger et navigation adaptée au mobile</li>
+                            <li>Appel à l'action et offre promotionnelle mis en avant</li>
+                            <li>Animations et effets lumineux en CSS</li>
+                            <li>Variables CSS organisées par thème (couleurs, typographie, boutons)</li>
+                        </ul>
+                        <ul class="etiquettes" aria-label="Technologies">
+                            <li>HTML</li><li>CSS</li><li>Mobile-first</li><li>Animations</li>
+                        </ul>
+                        <p class="projet__liens">
+                            <a href="https://github.com/selimidion70-png/Projet-aegis-bank">Voir le code sur GitHub</a>
+                        </p>
+                    </div>
+                </article>
+
+            </div>
         </div>
     </section>
 
     <!-- ===== Parcours ===== -->
-    <section id="parcours" class="section section--grise" aria-labelledby="titre-parcours">
-        <div class="conteneur deux-colonnes">
+    <section id="parcours" class="section" aria-labelledby="titre-parcours">
+        <div class="conteneur section__grille">
             <h2 id="titre-parcours" class="section__titre">Parcours</h2>
-            <ol class="chronologie">
-                <li>
-                    <p class="chronologie__date">2025 – 2027</p>
+            <div class="parcours">
+                <p class="parcours__date">2025 – 2027</p>
+                <div>
                     <h3>Développeur Web Front-End</h3>
-                    <p class="chronologie__lieu">EFP Bruxelles</p>
+                    <p class="parcours__lieu">EFP Bruxelles, formation en alternance</p>
                     <p>Intégration HTML/CSS, JavaScript, React, PHP et MySQL, accessibilité, gestion de projet et Git.</p>
-                </li>
-            </ol>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ===== Contact ===== -->
-    <section id="contact" class="section contact" aria-labelledby="titre-contact">
+    <section id="contact" class="contact" aria-labelledby="titre-contact">
         <div class="conteneur">
-            <h2 id="titre-contact" class="section__titre">Contact</h2>
-            <p class="contact__intro">Un projet, un stage ou une question ? Écrivez-moi, je réponds rapidement.</p>
+            <h2 id="titre-contact" class="contact__titre">Un stage, un projet ou une question ?</h2>
+            <p class="contact__intro">Écrivez-moi, je réponds rapidement.</p>
+            <p class="contact__email">
+                <a href="mailto:selimidion70@gmail.com">selimidion70@gmail.com</a>
+            </p>
             <ul class="contact__liste">
-                <li>
-                    <span class="contact__libelle">Email</span>
-                    <a href="mailto:selimidion70@gmail.com">selimidion70@gmail.com</a>
-                </li>
                 <li>
                     <span class="contact__libelle">Téléphone</span>
                     <a href="tel:+32489700933">+32&nbsp;489&nbsp;70&nbsp;09&nbsp;33</a>
@@ -304,8 +350,9 @@
 </main>
 
 <footer class="pied">
-    <div class="conteneur">
-        <p>&copy; 2026 Dion Selimi · Développeur Web Front-End</p>
+    <div class="conteneur pied__interieur">
+        <p>&copy; 2026 Dion Selimi</p>
+        <p>Développeur Web Front-End</p>
     </div>
 </footer>
 
