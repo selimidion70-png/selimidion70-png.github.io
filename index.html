@@ -54,8 +54,8 @@
                 <h1 id="titre-hero" class="hero__nom">Dion Selimi</h1>
                 <p class="hero__metier">Développeur web, front-end et PHP, en formation à l'EFP Bruxelles</p>
                 <p class="hero__intro">
-                    Je construis des sites accessibles et responsives, de l'intégration HTML, CSS et JavaScript
-                    jusqu'au back-end en PHP et MySQL.
+                    Je fais des sites complets : la partie visible en HTML, CSS et JavaScript,
+                    et ce qu'il y a derrière en PHP et MySQL.
                 </p>
                 <p class="hero__actions">
                     <a class="bouton bouton--plein" href="#projets">Voir mes projets</a>
@@ -97,12 +97,12 @@
             <h2 id="titre-a-propos" class="section__titre">À propos</h2>
             <div class="texte">
                 <p class="texte__chapeau">
-                    J'aime construire des interfaces simples à utiliser, et comprendre ce qui se passe derrière :
-                    base de données, sécurité, paiement, emails.
+                    Ce qui me plaît, c'est quand un site fonctionne vraiment : une réservation qui arrive,
+                    une commande qui met le stock à jour, un email qui part.
                 </p>
                 <p>
-                    Je cherche un stage où je peux travailler sur de vrais projets, en front-end comme en PHP,
-                    et apprendre au contact d'une équipe.
+                    À côté de ma formation, je développe deux boutiques en ligne pour de vrais commerces.
+                    Je cherche maintenant un stage pour travailler en équipe et apprendre de développeurs plus expérimentés.
                 </p>
             </div>
         </div>
@@ -164,8 +164,8 @@
                         <div><dt>Résultat</dt><dd>45/50 à l'examen, enrichi ensuite</dd></div>
                     </dl>
                     <p class="projet__defi">
-                        <strong>Le défi :</strong> empêcher deux clients de réserver le même créneau,
-                        en respectant les horaires d'ouverture, puis relier la réservation au paiement en ligne.
+                        Le plus difficile : empêcher deux clients de prendre le même créneau,
+                        en tenant compte des horaires du salon, puis relier la réservation au paiement.
                     </p>
                     <ul class="puces">
                         <li>Réservation en ligne, paiement Stripe ou sur place, emails de confirmation</li>
@@ -195,8 +195,8 @@
                             <div><dt>Statut</dt><dd>Vrai commerce, en développement</dd></div>
                         </dl>
                         <p class="projet__defi">
-                            <strong>Le défi :</strong> ne jamais vendre un article épuisé. Chaque combinaison
-                            taille × couleur a son stock, vérifié et mis à jour dans une transaction.
+                            Je voulais qu'on ne puisse jamais commander un article épuisé : chaque taille
+                            et chaque couleur a son propre stock, vérifié au moment de la commande.
                         </p>
                         <ul class="puces">
                             <li>Site en albanais : panier, commande et paiement à la livraison</li>
@@ -223,8 +223,8 @@
                             <div><dt>Statut</dt><dd>Vrai commerce, en développement</dd></div>
                         </dl>
                         <p class="projet__defi">
-                            <strong>Le défi :</strong> un même parfum existe en plusieurs contenances, chacune avec
-                            son prix, sa promotion et son stock, et les codes promo sont revérifiés à la commande.
+                            Un même parfum existe en plusieurs contenances, et chacune a son prix,
+                            sa promo et son stock. C'est ce qui m'a demandé le plus de réflexion dans la base de données.
                         </p>
                         <ul class="puces">
                             <li>Site en albanais : filtres par marque et note olfactive, liste d'envies</li>
@@ -251,8 +251,8 @@
                             <div><dt>Équipe</dt><dd>7 designers et 3 développeurs</dd></div>
                         </dl>
                         <p class="projet__defi">
-                            <strong>Le défi :</strong> respecter fidèlement les maquettes, à trois
-                            développeurs qui travaillent en même temps sur le même dépôt Git.
+                            On était trois développeurs sur le même dépôt Git, avec les maquettes
+                            des designers à respecter.
                         </p>
                         <ul class="puces">
                             <li><strong>Mes parties :</strong> header avec menu burger, section formation, formulaire de contact et footer</li>
@@ -280,8 +280,7 @@
                             <div><dt>Partie</dt><dd>Front-end</dd></div>
                         </dl>
                         <p class="projet__defi">
-                            <strong>Le défi :</strong> faire tenir tout l'écran d'accueil sur un téléphone, sans défilement,
-                            avec un code CSS organisé et facile à faire évoluer.
+                            Tout l'écran d'accueil devait tenir sur un téléphone, sans défilement.
                         </p>
                         <ul class="puces">
                             <li>Menu burger et navigation adaptée au mobile</li>
@@ -317,24 +316,38 @@
 
     <!-- ===== Contact ===== -->
     <section id="contact" class="contact" aria-labelledby="titre-contact">
-        <div class="conteneur">
-            <h2 id="titre-contact" class="contact__titre">Contact</h2>
-            <p class="contact__intro">Écrivez-moi, je réponds rapidement.</p>
-            <p class="contact__email">
-                <a href="mailto:selimidion70@gmail.com">selimidion70@gmail.com</a>
-            </p>
+        <div class="conteneur contact__grille">
+            <div class="contact__texte">
+                <h2 id="titre-contact" class="contact__titre">Contact</h2>
+                <p class="contact__intro">Écrivez-moi, je réponds rapidement.</p>
+                <p class="contact__action">
+                    <a class="bouton bouton--plein" href="mailto:selimidion70@gmail.com">M'envoyer un email</a>
+                </p>
+            </div>
             <ul class="contact__liste">
                 <li>
-                    <span class="contact__libelle">Téléphone</span>
-                    <a href="tel:+32489700933">+32&nbsp;489&nbsp;70&nbsp;09&nbsp;33</a>
+                    <a href="mailto:selimidion70@gmail.com">
+                        <span class="contact__libelle">Email</span>
+                        <span class="contact__valeur">selimidion70@gmail.com</span>
+                    </a>
                 </li>
                 <li>
-                    <span class="contact__libelle">GitHub</span>
-                    <a href="https://github.com/selimidion70-png">github.com/selimidion70-png</a>
+                    <a href="tel:+32489700933">
+                        <span class="contact__libelle">Téléphone</span>
+                        <span class="contact__valeur">+32&nbsp;489&nbsp;70&nbsp;09&nbsp;33</span>
+                    </a>
                 </li>
                 <li>
-                    <span class="contact__libelle">LinkedIn</span>
-                    <a href="https://www.linkedin.com/in/dion-selimi-662878340/">linkedin.com/in/dion-selimi-662878340</a>
+                    <a href="https://github.com/selimidion70-png">
+                        <span class="contact__libelle">GitHub</span>
+                        <span class="contact__valeur">selimidion70-png</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/dion-selimi-662878340/">
+                        <span class="contact__libelle">LinkedIn</span>
+                        <span class="contact__valeur">Dion Selimi</span>
+                    </a>
                 </li>
             </ul>
         </div>

@@ -403,10 +403,8 @@ p {
     font-weight: 700;
 }
 
-/* « Le défi » : le problème principal du projet */
+/* Phrase sur ce qui a été le plus difficile dans le projet */
 .projet__texte > .projet__defi {
-    padding: 0.1rem 0 0.1rem 1rem;
-    border-left: 3px solid var(--accent);
     color: var(--encre);
 }
 
@@ -521,73 +519,71 @@ p {
 
 /* ---------- 10. Contact ---------- */
 .contact {
-    padding: clamp(4rem, 9vw, 7rem) 0;
+    padding: clamp(3.5rem, 8vw, 6rem) 0;
     background: var(--bande);
     color: var(--bande-texte);
 }
 
-.contact a {
-    color: inherit;
-}
-
-.contact a:focus-visible {
-    outline-color: var(--bande-texte);
+.contact__grille {
+    display: grid;
+    gap: 2.5rem;
 }
 
 .contact__titre {
-    max-width: 18ch;
-    font-size: clamp(2rem, 5vw, 3.4rem);
-    letter-spacing: -0.035em;
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    letter-spacing: -0.03em;
 }
 
 .contact__intro {
-    margin: 1rem 0 2.5rem;
-    color: color-mix(in srgb, var(--bande-texte) 72%, transparent);
-    font-size: 1.15rem;
+    max-width: 30rem;
+    margin: 0.75rem 0 1.75rem;
+    color: var(--doux);
+    font-size: 1.1rem;
 }
 
-.contact__email {
-    margin: 0 0 3rem;
-    font-size: clamp(1.4rem, 4vw, 2.4rem);
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    font-weight: 700;
-    overflow-wrap: anywhere;
+.contact__action {
+    margin: 0;
 }
 
-.contact__email a {
-    text-decoration-thickness: 2px;
-    text-underline-offset: 0.18em;
-}
-
-.contact__email a:hover {
-    text-decoration-thickness: 3px;
-}
-
+/* Les 4 moyens de contact : des cartes cliquables */
 .contact__liste {
     display: grid;
-    gap: 1.5rem;
+    gap: 0.75rem;
     margin: 0;
-    padding: 1.5rem 0 0;
-    border-top: 1px solid color-mix(in srgb, var(--bande-texte) 22%, transparent);
+    padding: 0;
     list-style: none;
+}
+
+.contact__liste a {
+    display: block;
+    padding: 1rem 1.25rem;
+    background: var(--surface);
+    border: 1px solid var(--trait);
+    border-radius: var(--rayon);
+    color: var(--encre);
+    text-decoration: none;
+    transition: border-color 0.15s ease;
+}
+
+.contact__liste a:hover {
+    border-color: var(--accent);
+}
+
+.contact__liste a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 .contact__libelle {
     display: block;
-    margin-bottom: 0.2rem;
-    color: color-mix(in srgb, var(--bande-texte) 65%, transparent);
+    color: var(--doux);
     font-size: 0.85rem;
 }
 
-.contact__liste a {
+.contact__valeur {
+    display: block;
     font-weight: 700;
-    text-decoration: none;
     overflow-wrap: anywhere;
-}
-
-.contact__liste a:hover {
-    text-decoration: underline;
 }
 
 /* ---------- 11. Pied de page ---------- */
@@ -651,7 +647,7 @@ p {
     }
 
     .contact__liste {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .parcours {
@@ -682,6 +678,13 @@ p {
 
     .competences {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    /* Contact : texte à gauche, cartes à droite */
+    .contact__grille {
+        grid-template-columns: 5fr 7fr;
+        gap: 4rem;
+        align-items: center;
     }
 
     /* Projet principal : grande image à gauche, texte à droite */
