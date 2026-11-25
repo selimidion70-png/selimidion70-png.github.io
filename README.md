@@ -4,7 +4,7 @@ Portfolio personnel de **Dion Selimi**, développeur web (front-end et PHP) en f
 
 👉 En ligne : **https://selimidion70-png.github.io/**
 
-Site statique en **HTML et CSS** (sans framework ni JavaScript), écrit en **mobile-first**, accessible, avec mode sombre automatique et une mise en page prévue pour l'impression.
+Site statique en **HTML et CSS** (sans framework ni JavaScript), écrit en **mobile-first**, accessible, avec un thème sombre bleu pétrole et une mise en page prévue pour l'impression.
 
 ## Contenu
 

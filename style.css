@@ -13,33 +13,23 @@
 
 /* ---------- 1. Couleurs et réglages ---------- */
 :root {
-    --papier:       #f4f6f5;   /* fond de la page */
-    --surface:      #ffffff;   /* fiche, cadres */
-    --encre:        #142026;   /* texte principal */
-    --doux:         #56636b;   /* texte secondaire */
-    --trait:        #d6dcda;   /* bordures et séparateurs */
-    --accent:       #0d6e6e;   /* bleu pétrole */
-    --accent-pale:  #dcedea;
-    --bande:        #10292c;   /* fond de la section contact */
-    --bande-texte:  #e9f1ef;
+    /* Thème sombre bleu pétrole, le même sur tous les appareils */
+    color-scheme: dark;
+
+    --papier:       #0f1b1e;   /* fond de la page */
+    --surface:      #16262a;   /* fiche, cadres */
+    --encre:        #e9f0ee;   /* texte principal */
+    --doux:         #a3b3b5;   /* texte secondaire */
+    --trait:        #27393d;   /* bordures et séparateurs */
+    --accent:       #5ec8bd;   /* turquoise */
+    --accent-pale:  #183a3a;
+    --bande:        #0b2a2b;   /* fond de la section contact */
+    --bande-texte:  #e9f0ee;
 
     --police:       'Schibsted Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
     --largeur:      1160px;
     --marge:        clamp(1.25rem, 4vw, 2.5rem);
     --rayon:        6px;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --papier:      #0e1518;
-        --surface:     #152024;
-        --encre:       #e6ecea;
-        --doux:        #9aa8ad;
-        --trait:       #26353b;
-        --accent:      #5cc2ba;
-        --accent-pale: #16302f;
-        --bande:       #0a2224;
-    }
 }
 
 /* ---------- 2. Base ---------- */
