@@ -4,7 +4,7 @@ Portfolio personnel de **Dion Selimi**, développeur web (front-end et PHP) en f
 
 👉 En ligne : **https://selimidion70-png.github.io/**
 
-Site statique en **HTML et CSS** (sans framework ni JavaScript), écrit en **mobile-first**, accessible, avec un thème bleu marine et cyan et une mise en page prévue pour l'impression.
+Site statique en **HTML et CSS**, avec un petit script JavaScript pour le menu burger sur téléphone (sans framework), écrit en **mobile-first**, accessible, avec un thème bleu marine et cyan et une mise en page prévue pour l'impression.
 
 ## Contenu
 
@@ -33,6 +33,7 @@ Les couleurs sont regroupées en variables CSS en haut du fichier.
 ## Modifier
 
 - Textes : `index.html`
+- Menu burger (téléphone) : `script.js` — sans JavaScript, tous les liens restent visibles
 - Couleurs et mise en page : `style.css`
 - Captures d'écran des projets : dossier `img/`
 - Image affichée quand le lien est partagé (LinkedIn, WhatsApp…) : `img/apercu-partage.png`

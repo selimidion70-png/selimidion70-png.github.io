@@ -42,7 +42,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 1rem; /* en mobile, l'en-tête n'est pas fixe */
+    scroll-padding-top: 1rem; /* sans JavaScript, l'en-tête n'est pas fixe en mobile */
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -115,6 +115,16 @@ p {
     top: 1rem;
 }
 
+/* Texte lu par les lecteurs d'écran mais invisible à l'écran */
+.visuellement-cache {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
 /* ---------- 3. En-tête ---------- */
 .entete {
     border-bottom: 1px solid var(--trait);
@@ -156,6 +166,130 @@ p {
 
 .nav a:hover {
     color: var(--encre);
+}
+
+/* ----- Menu burger (téléphone, seulement si JavaScript est actif) ----- */
+.menu-bouton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    margin-right: -0.6rem;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: var(--rayon);
+    color: var(--encre);
+    cursor: pointer;
+}
+
+.menu-bouton[hidden] {
+    display: none;
+}
+
+.menu-bouton:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+/* Les trois barres de l'icône */
+.menu-bouton__icone,
+.menu-bouton__icone::before,
+.menu-bouton__icone::after {
+    display: block;
+    width: 1.35rem;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.menu-bouton__icone {
+    position: relative;
+}
+
+.menu-bouton__icone::before,
+.menu-bouton__icone::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.menu-bouton__icone::before {
+    top: -0.42rem;
+}
+
+.menu-bouton__icone::after {
+    top: 0.42rem;
+}
+
+/* Menu ouvert : les barres forment une croix */
+.menu-bouton[aria-expanded="true"] .menu-bouton__icone {
+    background: transparent;
+}
+
+.menu-bouton[aria-expanded="true"] .menu-bouton__icone::before {
+    transform: translateY(0.42rem) rotate(45deg);
+}
+
+.menu-bouton[aria-expanded="true"] .menu-bouton__icone::after {
+    transform: translateY(-0.42rem) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-bouton__icone,
+    .menu-bouton__icone::before,
+    .menu-bouton__icone::after {
+        transition: none;
+    }
+}
+
+/* Avec JavaScript : en-tête sur une ligne, fixé en haut, menu caché */
+.js .entete {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--papier) 94%, transparent);
+    backdrop-filter: blur(12px);
+}
+
+.js .entete__interieur {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.js #menu-principal {
+    display: none;
+    width: 100%;
+}
+
+.js #menu-principal.est-ouvert {
+    display: block;
+}
+
+.js .nav {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0.25rem 0 0.5rem;
+}
+
+.js .nav a {
+    display: block;
+    padding: 0.75rem 0;
+    border-top: 1px solid var(--trait);
+    font-size: 1rem;
+    color: var(--encre);
+}
+
+.js {
+    scroll-padding-top: 4.5rem;
 }
 
 /* ---------- 4. Présentation ---------- */
@@ -649,6 +783,45 @@ p {
 
     .nav {
         gap: 2rem;
+    }
+
+    .menu-bouton,
+    .menu-bouton[hidden] {
+        display: none;
+    }
+
+    .js .entete__interieur {
+        flex-wrap: nowrap;
+        gap: 1.5rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .js #menu-principal {
+        display: block;
+        width: auto;
+    }
+
+    .js .nav {
+        flex-direction: row;
+        gap: 2rem;
+        padding: 0;
+    }
+
+    .js .nav a {
+        display: inline;
+        padding: 0;
+        border-top: 0;
+        font-size: 0.85rem;
+        color: var(--doux);
+    }
+
+    .js .nav a:hover {
+        color: var(--encre);
+    }
+
+    .js {
+        scroll-padding-top: 5rem;
     }
 
     .hero {

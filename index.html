@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;600;700;800;900&display=swap">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -33,7 +34,11 @@
 <header class="entete">
     <div class="conteneur entete__interieur">
         <a href="#accueil" class="logo">Dion Selimi</a>
-        <nav aria-label="Navigation principale">
+        <button class="menu-bouton" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>
+            <span class="menu-bouton__icone" aria-hidden="true"></span>
+            <span class="visuellement-cache">Menu</span>
+        </button>
+        <nav id="menu-principal" aria-label="Navigation principale">
             <ul class="nav">
                 <li><a href="#a-propos">À propos</a></li>
                 <li><a href="#competences">Compétences</a></li>
